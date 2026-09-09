@@ -44,6 +44,10 @@ public class Personagem {
 		return quantidadeDePontos;
 	}
 	
+	public void setNivelPersonagem(NivelPersonagem nivel) {
+		this.nivel = nivel;
+	}
+	
 	public void registrarMissao( RankMissao missao) {
 		if(missao != null) {
 		quantidadeDePontos += missao.calcularPontos();
@@ -60,11 +64,8 @@ public class Personagem {
 		else if(quantidadeDePontos <= 149) {
 			nivel = new Jounin();
 		}
-		else if(quantidadeDePontos <= 200) {
-			nivel = new Sanin();
-		}
 		else {
-			nivel = new Hokage();
+			nivel = new Sanin();
 		}
 	}
 }
